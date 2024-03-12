@@ -23,6 +23,14 @@ describe("Bowling Game", () => {
     expect(game.score()).toEqual(16);
   });
 
+  it("one strike, bonus and all other rolls 0", () => {
+    game.roll(10); //strike;
+    game.roll(3);
+    game.roll(4);
+    rollMany(16, 0);
+    expect(game.score()).toEqual(24);
+  });
+
   function rollMany(rolls, pins) {
     for (let i = 0; i < rolls; i++) {
       game.roll(pins);
