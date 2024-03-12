@@ -24,7 +24,7 @@ describe("Bowling Game", () => {
   });
 
   it("one strike, bonus and all other rolls 0", () => {
-    game.roll(10); //strike;
+    rollStrike();
     game.roll(3);
     game.roll(4);
     rollMany(16, 0);
@@ -40,5 +40,9 @@ describe("Bowling Game", () => {
   function rollSpare() {
     game.roll(5);
     game.roll(5);
+  }
+
+  function rollStrike() {
+    game.roll(10);
   }
 });
