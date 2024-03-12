@@ -21,11 +21,11 @@ describe("Bowling Game", () => {
     expect(game.score()).toEqual(20);
   });
 
-  /*it("one spare, bonus and all other rolls 0", () => {
+  it("one spare, bonus and all other rolls 0", () => {
     game.roll(5);
     game.roll(5);
     game.roll(3);
-    game.roll(17, 0);
+    rollMany(17, 0);
     expect(game.score()).toEqual(16);
-  });*/
+  });
 });
