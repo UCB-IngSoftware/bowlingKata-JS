@@ -9,8 +9,10 @@ class BowlingGame {
   }
   score() {
     let result = 0;
-    for (let i = 0; i < this.rolls.length; i++) {
-      result += this.rolls[i];
+    let i = 0;
+    for (let frame = 0; frame < 10; frame++) {
+      result += this.rolls[i] + this.rolls[i + 1];
+      i += 2;
     }
     return result;
   }

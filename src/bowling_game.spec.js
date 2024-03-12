@@ -1,7 +1,11 @@
 import BowlingGame from "./bowling_game.js";
 
 describe("Bowling Game", () => {
-  let game = new BowlingGame();
+  let game;
+  beforeEach(() => {
+    game = new BowlingGame();
+  });
+
   function rollMany(rolls, pins) {
     for (let i = 0; i < rolls; i++) {
       game.roll(pins);
