@@ -11,7 +11,7 @@ class BowlingGame {
     let result = 0;
     let frameIndex = 0;
     for (let frame = 0; frame < 10; frame++) {
-      if (this.rolls[frameIndex] + this.rolls[frameIndex + 1] === 10) {
+      if (this.isSpare(frameIndex)) {
         //spare
         result += 10 + this.rolls[frameIndex + 2];
         frameIndex += 2;
@@ -21,6 +21,10 @@ class BowlingGame {
       }
     }
     return result;
+  }
+
+  isSpare(frameIndex) {
+    return this.rolls[frameIndex] + this.rolls[frameIndex + 1] === 10;
   }
 }
 export default BowlingGame;
