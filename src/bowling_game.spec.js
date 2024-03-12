@@ -31,6 +31,11 @@ describe("Bowling Game", () => {
     expect(game.score()).toEqual(24);
   });
 
+  it("perfect game", () => {
+    rollMany(12, 10);
+    expect(game.score()).toEqual(300);
+  });
+
   function rollMany(rolls, pins) {
     for (let i = 0; i < rolls; i++) {
       game.roll(pins);
