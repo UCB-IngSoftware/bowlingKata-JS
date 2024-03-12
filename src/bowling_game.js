@@ -1,7 +1,13 @@
 class BowlingGame {
-  roll() {}
+  constructor() {
+    this.totalScore = 0;
+  }
+
+  roll(n) {
+    this.totalScore += n;
+  }
   score() {
-    return 0;
+    return this.totalScore;
   }
 }
 export default BowlingGame;
